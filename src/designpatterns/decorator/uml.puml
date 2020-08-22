@@ -1,0 +1,38 @@
+@startuml
+
+skinparam linetype polyline
+skinparam linetype ortho
+
+Topping o-left- Pizza
+Pizza <|-- SimplePizza
+Topping <|-- PepperoniTopping
+Topping <|-- CheeseTopping
+Pizza <|-[norank]- Topping
+
+interface Pizza {
+  getDescription(): String
+  getPrice() : double
+}
+
+class SimplePizza {
+  + getDescription() : String
+  + getPrice() : double
+}
+
+abstract class Topping {
+  ~ pizza: Pizza
+  + getDescription() : String
+  + getPrice() : double
+}
+
+class PepperoniTopping {
+  + getDescription() : String
+  + getPrice() : double
+}
+
+class CheeseTopping {
+  + getDescription() : String
+  + getPrice() : double
+}
+
+@enduml
