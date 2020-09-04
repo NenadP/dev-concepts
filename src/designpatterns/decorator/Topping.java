@@ -1,12 +1,12 @@
 package designpatterns.decorator;
 
 abstract class Topping implements Pizza {
-  
-  protected Pizza pizza;
 
-  Topping(Pizza pizza) {
-      this.pizza = pizza;
-  }
+    Pizza pizza;
+
+    Topping(Pizza pizza) {
+        this.pizza = pizza;
+    }
 
     abstract public String getDescription();
 
