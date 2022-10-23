@@ -1,6 +1,6 @@
 package designpatterns.decorator;
 
-class Main {
+class App {
     public static void main(String[] args) {
         Pizza pizza = new PepperoniTopping(new CheeseTopping(new PlainPizza()));
         
